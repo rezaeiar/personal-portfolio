@@ -5,7 +5,7 @@ import Button from '../Button/Button'
 
 export default function NavBar() {
     return (
-        <div className='py-5 bg-white'>
+        <div className='py-5 bg-white sticky top-0'>
             <div className="container">
                 <div className="flex justify-between items-center">
                     <div className="flex items-center gap-x-6">
