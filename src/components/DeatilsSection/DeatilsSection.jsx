@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function DeatilSection() {
+export default function DeatilsSection() {
     return (
         <div className='py-12'>
             <div className="container">
