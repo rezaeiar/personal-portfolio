@@ -18,7 +18,7 @@ export default function Header() {
                             Let’s Get Started
                         </Button>
                     </div>
-                    <div>
+                    <div className='flex flex-shrink-0'>
                         <img src="./images/home/image 1.png" alt="" />
                     </div>
                 </div>
