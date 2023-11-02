@@ -12,4 +12,9 @@
         font-family: 'Inter-SemiBold';
         src: url(/public/fonts/Inter/Inter-SemiBold.ttf);
     }
+
+    @font-face {
+        font-family: 'Inter-Bold';
+        src: url(/public/fonts/Inter/Inter-Bold.ttf);
+    }
 }

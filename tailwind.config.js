@@ -11,7 +11,8 @@ export default {
         extend: {
             fontFamily: {
                 'Inter-Regular': 'Inter-Regular',
-                'Inter-SemiBold': 'Inter-SemiBold'
+                'Inter-SemiBold': 'Inter-SemiBold',
+                'Inter-Bold': 'Inter-Bold'
             }
         },
     },
