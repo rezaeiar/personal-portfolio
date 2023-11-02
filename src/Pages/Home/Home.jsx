@@ -6,6 +6,7 @@ import StatisticsSection from '../../components/StatisticsSection/StatisticsSect
 import ToolsSection from '../../components/ToolsSection/ToolsSection'
 import Members from '../../components/Members/Members'
 import GetStarted from '../../components/GetStarted/GetStarted'
+import Footer from '../../components/Footer/Footer'
 
 export default function Home() {
     return (
@@ -17,6 +18,7 @@ export default function Home() {
             <ToolsSection />
             <Members />
             <GetStarted />
+            <Footer />
         </>
     )
 }
