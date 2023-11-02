@@ -5,6 +5,7 @@ import DeatilsSection from '../../components/DeatilsSection/DeatilsSection'
 import StatisticsSection from '../../components/StatisticsSection/StatisticsSection'
 import ToolsSection from '../../components/ToolsSection/ToolsSection'
 import Members from '../../components/Members/Members'
+import GetStarted from '../../components/GetStarted/GetStarted'
 
 export default function Home() {
     return (
@@ -15,6 +16,7 @@ export default function Home() {
             <StatisticsSection />
             <ToolsSection />
             <Members />
+            <GetStarted />
         </>
     )
 }
