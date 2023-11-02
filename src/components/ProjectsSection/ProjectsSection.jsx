@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Button from '../Button/Button'
+import ProjectCard from '../ProjectCard/ProjectCard'
 
 export default function ProjectsSection() {
     return (
@@ -11,12 +11,12 @@ export default function ProjectsSection() {
                         Projects <span className='font-Inter-Medium'>😎🐱‍💻</span>
                     </h2>
                     <div className="grid grid-cols-3 gap-x-6 gap-y-12">
-                        <div className="h-10 bg-red-600"></div>
-                        <div className="h-10 bg-red-600"></div>
-                        <div className="h-10 bg-red-600"></div>
-                        <div className="h-10 bg-red-600"></div>
-                        <div className="h-10 bg-red-600"></div>
-                        <div className="h-10 bg-red-600"></div>
+                        <ProjectCard />
+                        <ProjectCard />
+                        <ProjectCard />
+                        <ProjectCard />
+                        <ProjectCard />
+                        <ProjectCard />
                     </div>
                     <div className="py-5 border-b-2 border-black text-center">
                         <span className='font-Inter-Medium text-xl cursor-pointer'>
