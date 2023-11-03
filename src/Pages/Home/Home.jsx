@@ -12,8 +12,8 @@ export default function Home() {
     return (
         <>
             <Header />
-            {/* <ProjectsSection />
-            <DeatilsSection />
+            <ProjectsSection />
+            {/* <DeatilsSection />
             <StatisticsSection />
             <ToolsSection />
             <Members />

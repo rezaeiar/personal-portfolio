@@ -6,19 +6,19 @@ export default function ProjectCard() {
             <div>
                 <img src="./images/projects/Rectangle 11.png" className='w-full' alt="" />
             </div>
-            <div className="p-3 flex flex-col gap-y-3">
-                <span className='text-xs text-[#454D55] font-Inter-Regular'>
+            <div className="p-3 flex flex-col gap-y-3 sm:gap-y-2.5 md:gap-y-3">
+                <span className='text-xs sm:text-[10px] md:text-xs text-[#454D55] font-Inter-Regular'>
                     May -July 2017
                 </span>
                 <div className="flex flex-col gap-y-1.5">
-                    <h2 className='text-2xl font-Inter-SemiBold'>
+                    <h2 className='text-2xl sm:text-xl md:text-2xl font-Inter-SemiBold'>
                         Grids & Alignment
                     </h2>
-                    <span className='text-xs font-Inter-Regular text-[#F2994A]'>
+                    <span className='text-xs sm:text-[10px] md:text-xs font-Inter-Regular text-[#F2994A]'>
                         Mobile, UX, Vivid, Concept
                     </span>
                 </div>
-                <span className='text-sm/6 font-Inter-Regular text-[#454D55]'>
+                <span className='text-sm/6 sm:text-xs md:text-sm/6 font-Inter-Regular text-[#454D55] line-clamp-3'>
                     Expedita laborum suscipit sequi et nobis voluptas fuga placeat. Omnis est ratione. Repellendus recusandae a.
                 </span>
             </div>
