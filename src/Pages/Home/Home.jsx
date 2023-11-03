@@ -13,8 +13,8 @@ export default function Home() {
         <>
             <Header />
             <ProjectsSection />
-            {/* <DeatilsSection />
-            <StatisticsSection />
+            {/* <DeatilsSection /> */}
+            {/* <StatisticsSection />
             <ToolsSection />
             <Members />
             <GetStarted />
