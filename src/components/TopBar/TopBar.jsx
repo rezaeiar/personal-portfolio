@@ -7,8 +7,8 @@ export default function TopBar() {
                 Get Quick response via contact us on WhatsApp
             </span>
             <span className='text-zinc-950 font-Inter-SemiBold flex gap-x-1 items-center'>
-                <i class="bi bi-whatsapp"></i>
-                <a href="tel:+909999999000">
+                <i className="bi bi-whatsapp"></i>
+                <a href="tel:+909999999000" className='cursor-pointer' title='Call Me!'>
                     +90 54321 09876
                 </a>
             </span>
