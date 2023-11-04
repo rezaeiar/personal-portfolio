@@ -14,14 +14,14 @@ export default function ToolsSection() {
         { id: 8, title: 'MeTool', img: 'adobe_photoshop.svg', color: 'bg-[#F9FCF2]' },
     ])
     return (
-        <div className='py-12'>
+        <div className='py-6 lg:py-12'>
             <div className="container">
-                <div className="flex flex-col gap-y-16">
+                <div className="flex flex-col gap-y-10 lg:gap-y-16">
                     <div className="flex flex-col gap-y-4">
-                        <h6 className='text-4xl font-Inter-SemiBold'>
+                        <h6 className='text-2xl md:text-3xl lg:text-4xl font-Inter-SemiBold'>
                             Tools i use in my daily life as UI/UX Designer <span className='font-sans'>🌤</span>
                         </h6>
-                        <span className='text-[#454D55] text-lg font-Inter-Regular'>
+                        <span className='text-[#454D55] text-base md:text-lg font-Inter-Regular'>
                             Work with many big brands, brings for me great experience.
                         </span>
                     </div>
