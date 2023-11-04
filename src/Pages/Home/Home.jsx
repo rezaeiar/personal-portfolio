@@ -16,9 +16,9 @@ export default function Home() {
             <DeatilsSection />
             <StatisticsSection />
             <ToolsSection />
-            {/* <Members />
-            <GetStarted />
-            <Footer /> */}
+            <Members />
+            {/* <GetStarted /> */}
+            {/* <Footer /> */}
         </>
     )
 }
