@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import { Link } from 'react-router-dom'
 import ProjectCard from '../ProjectCard/ProjectCard'
+import ProjectPulse from '../ProjectPulse/ProjectPulse'
 
 export default function ProjectsSection() {
     const [data, setData] = useState([
@@ -20,11 +21,17 @@ export default function ProjectsSection() {
                         Projects <span className='font-Inter-Medium'>😎🐱‍💻</span>
                     </h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6 lg:gap-y-12">
-                        {
+                        <ProjectPulse />
+                        <ProjectPulse />
+                        <ProjectPulse />
+                        <ProjectPulse />
+                        <ProjectPulse />
+                        <ProjectPulse />
+                        {/* {
                             data.map(project => (
                                 <ProjectCard key={project.id} {...project} />
                             ))
-                        }
+                        } */}
                     </div>
                     <div className="py-2.5 lg:py-3 border-b-2 border-black text-center">
                         <Link to='/work' className='font-Inter-Medium text-sm sm:text-base lg:text-lg cursor-pointer'>
