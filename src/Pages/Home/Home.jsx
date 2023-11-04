@@ -18,7 +18,7 @@ export default function Home() {
             <ToolsSection />
             <Members />
             <GetStarted />
-            {/* <Footer /> */}
+            <Footer />
         </>
     )
 }

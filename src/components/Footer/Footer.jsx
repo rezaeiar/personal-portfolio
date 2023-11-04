@@ -1,29 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Footer() {
+
+    const [agreePrivacyPolicy, setAgreePrivacyPolicy] = useState(true)
+
     return (
-        <div className='pt-20 bg-black text-white'>
+        <div className='pt-8 md:pt-12 lg:pt-20 bg-black text-white'>
             <div className="container">
-                <div className="flex flex-col gap-y-14">
-                    <h4 className='text-4xl font-Inter-Bold'>
-                        Entrust Design to Professionals
+                <div className="flex flex-col gap-y-8 lg:gap-y-14">
+                    <h4 className='text-3xl lg:text-4xl font-Inter-Bold'>
+                        Entrust Design <br className='hidden sm:block' />
+                        to Professionals
                     </h4>
-                    <div className="flex justify-between gap-x-16">
-                        <div className="flex flex-col gap-y-5">
+                    <div className="flex flex-col sm:flex-row justify-between gap-x-5 gap-y-8 md:gap-x-8 lg:gap-x-16">
+                        <div className="flex flex-col gap-y-3 sm:gap-y-5">
                             <h6 className='font-Inter-SemiBold'>
                                 Address
                             </h6>
-                            <span className='text-sm font-Inter-Regular'>
-                                Germany —
-                                78515h Street, Office 478
+                            <span className='text-xs lg:text-sm font-Inter-Regular'>
+                                Germany — <br className='hidden sm:block' />
+                                78515h Street, Office 478 <br className='hidden sm:block' />
                                 Berlin, De 81566
                             </span>
                         </div>
-                        <div className="flex flex-col gap-y-5">
+                        <div className="flex flex-col gap-y-3 sm:gap-y-5">
                             <h6 className='font-Inter-SemiBold'>
                                 Say Hellow
                             </h6>
-                            <ul className='flex flex-col gap-y-2.5 text-sm'>
+                            <ul className='flex flex-col gap-y-2.5 text-xs lg:text-sm'>
                                 <li className='font-Inter-Regular'>
                                     kiritgoti007@gmailcom
                                 </li>
@@ -32,11 +36,11 @@ export default function Footer() {
                                 </li>
                             </ul>
                         </div>
-                        <div className="flex flex-col gap-y-5">
+                        <div className="flex flex-col gap-y-3 sm:gap-y-5">
                             <h6 className='font-Inter-SemiBold'>
                                 Social
                             </h6>
-                            <ul className='flex flex-col gap-y-2.5 text-sm'>
+                            <ul className='flex flex-col gap-y-2.5 text-xs lg:text-sm'>
                                 <li className='font-Inter-Regular'>
                                     Facebook
                                 </li>
@@ -51,21 +55,32 @@ export default function Footer() {
                                 </li>
                             </ul>
                         </div>
-                        <div className="flex flex-col gap-y-5">
+                        <div className="flex flex-col gap-y-3 sm:gap-y-5">
                             <h6 className='font-Inter-SemiBold'>
                                 Newsletter
                             </h6>
-                            <ul className='flex flex-col gap-y-2.5 text-sm'>
+                            <ul className='flex flex-col gap-y-3 sm:gap-y-6 text-xs lg:text-sm'>
                                 <li className='font-Inter-Regular'>
-                                    I agree to the Privacy Policy
+                                    <div className='w-full sm:w-48 md:w-56 lg:w-80 relative flex items-center'>
+                                        <i class="bi bi-envelope absolute left-0"></i>
+                                        <i class="bi bi-chevron-right text-[10px] absolute right-0"></i>
+                                        <input type="text" className='ps-6 w-full py-2 outline-none bg-transparent border-b border-white/60 text-xs lg:text-sm font-Inter-Regular text-white placeholder:text-xs placeholder:text-white placeholder:font-Inter-Regular' placeholder='Enter your email' />
+                                    </div>
                                 </li>
                                 <li className='font-Inter-Regular'>
-                                    I agree to the Privacy Policy
+                                    <div className="flex gap-x-2 items-center">
+                                        <div className="h-3 w-3 sm:h-4 sm:w-4 rounded border border-white">
+                                            <div className={`${agreePrivacyPolicy ? 'opacity-100' : 'opacity-0'} flex h-full w-full bg-white items-center justify-center cursor-pointer`} onClick={() => setAgreePrivacyPolicy(prevState => !prevState)}>
+                                                <i class="bi bi-check text-black"></i>
+                                            </div>
+                                        </div>
+                                        I agree to the Privacy Policy
+                                    </div>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div className="py-6 text-sm font-Inter-Regular border-t border-white/40">
+                    <div className="py-4 sm:py-6 text-xs lg:text-sm font-Inter-Regular border-t border-white/40">
                         KiritGoti @ 2023. All Rights Reserved.
                     </div>
                 </div>
