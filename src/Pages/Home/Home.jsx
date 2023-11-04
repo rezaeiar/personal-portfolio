@@ -17,7 +17,7 @@ export default function Home() {
             <StatisticsSection />
             <ToolsSection />
             <Members />
-            {/* <GetStarted /> */}
+            <GetStarted />
             {/* <Footer /> */}
         </>
     )
