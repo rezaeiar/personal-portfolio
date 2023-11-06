@@ -10,7 +10,7 @@ export default function Work() {
         <>
             <PortfolioHeader />
             <PortfolioCovers />
-            {/* <PortfolioSection /> */}
+            <PortfolioSection />
             <GetStarted />
         </>
     )

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function PortfolioCovers() {
     return (
-        <div className='pb-14'>
+        <div className='pb-6 lg:pb-14'>
             <div className="container">
                 <div className="relative sm:h-[192px] md:h-[232px] lg:h-[310px] xl:h-[390px] 2xl:h-[460px] flex items-end sm:mt-20">
                     <div className='hidden sm:flex'>
