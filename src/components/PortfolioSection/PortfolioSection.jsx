@@ -1,6 +1,7 @@
 import React from 'react'
 
 import PortfolioItem from '../PortfolioItem/PortfolioItem'
+import PortfolioPulse from '../PortfolioPulse/PortfolioPulse'
 
 export default function PortfolioSection() {
     return (
@@ -8,7 +9,7 @@ export default function PortfolioSection() {
             <div className="container">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8 xl:gap-12">
                     <PortfolioItem />
-                    <PortfolioItem />
+                    <PortfolioPulse />
                     <PortfolioItem />
                     <PortfolioItem />
                     <PortfolioItem />
