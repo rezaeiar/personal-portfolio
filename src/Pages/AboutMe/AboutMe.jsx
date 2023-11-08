@@ -15,7 +15,7 @@ export default function AboutMe() {
             <DetailsSection>
                 <div className="flex flex-col lg:flex-row justify-between items-center gap-x-20 gap-y-4 lg:gap-y-0">
                     <div className="relative shrink-0 w-full lg:w-auto">
-                        <img src="./images/home/Rectangle 12.png" className='h-[390px] sm:h-[500px] md:h-[600px] lg:h-[455px] w-full lg:w-[455px] xl:w-[493px] object-cover' alt="" />
+                        <img src="./images/home/Rectangle 12.png" className='aspect-square w-full lg:w-[455px] xl:w-[493px] object-cover' alt="" />
                     </div>
                     <div className="flex flex-col gap-y-4 sm:gap-y-8">
                         <div className="flex flex-col gap-y-3 sm:gap-y-4">

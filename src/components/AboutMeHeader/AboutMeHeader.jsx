@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function AboutMeHeader() {
     return (
-        <div className='py-12 md:py-20'>
+        <div className='py-6 md:py-20'>
             <div className="container">
                 <div className="flex flex-col items-center gap-y-2.5">
                     <h4 className='text-[#34113F] font-Inter-Bold text-3xl md:text-5xl'>
