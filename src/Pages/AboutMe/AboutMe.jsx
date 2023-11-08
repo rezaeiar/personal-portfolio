@@ -5,6 +5,7 @@ import DetailsSection from '../../components/DetailsSection/DetailsSection'
 import StatisticsSection from '../../components/StatisticsSection/StatisticsSection'
 import Members from '../../components/Members/Members'
 import AboutMeCover from '../../components/AboutMeCover/AboutMeCover'
+import Testimonials from '../../components/Testimonials/Testimonials'
 
 import Button from '../../components/Button/Button'
 
@@ -104,6 +105,7 @@ export default function AboutMe() {
                 </div>
             </DetailsSection>
             <AboutMeCover />
+            {/* <Testimonials /> */}
         </>
     )
 }
