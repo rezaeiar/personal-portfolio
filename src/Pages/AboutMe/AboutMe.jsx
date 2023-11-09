@@ -105,7 +105,7 @@ export default function AboutMe() {
                 </div>
             </DetailsSection>
             <AboutMeCover />
-            {/* <Testimonials /> */}
+            <Testimonials />
         </>
     )
 }
