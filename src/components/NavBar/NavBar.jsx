@@ -1,9 +1,19 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { Link } from 'react-router-dom'
 import Button from '../Button/Button'
 
+import { useDispatch, useSelector } from 'react-redux'
+import { getMenusFromServer } from '../../Redux/store/Menus'
+
 export default function NavBar() {
+
+    const menus = useSelector(state => state.menus)
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(getMenusFromServer())
+    }, [])
 
     const [searchValue, setSearchValue] = useState('')
 

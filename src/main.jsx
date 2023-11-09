@@ -5,9 +5,14 @@ import './index.css'
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 import { BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux';
+
+import store from './Redux/store.js';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <BrowserRouter >
-        <App />
-    </BrowserRouter>
+    <Provider store={store}>
+        <BrowserRouter >
+            <App />
+        </BrowserRouter>
+    </Provider>
 )
