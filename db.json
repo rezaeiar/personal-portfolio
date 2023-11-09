@@ -1,19 +1,22 @@
 {
-    "posts": [
+    "menus": [
         {
             "id": 1,
-            "title": "json-server",
-            "author": "typicode"
-        }
-    ],
-    "comments": [
+            "title": "💼 Work",
+            "route": "/work",
+            "styles": "hidden md:block text-zinc-950 font-Inter-Regular text-[10px] lg:text-xs"
+        },
         {
-            "id": 1,
-            "body": "some comment",
-            "postId": 1
+            "id": 2,
+            "title": "😀 About Me",
+            "route": "/about-me",
+            "styles": "hidden md:block text-zinc-950 font-Inter-Regular text-[10px] lg:text-xs"
+        },
+        {
+            "id": 3,
+            "title": "🤙 Contact Us",
+            "route": "/contact-us",
+            "styles": "hidden md:block transition-colors hover:bg-gray-800 px-3 py-2.5 lg:px-3.5 lg:py-3 bg-zinc-950 text-white rounded-md font-Inter-SemiBold text-[10px] lg:text-xs"
         }
-    ],
-    "profile": {
-        "name": "typicode"
-    }
+    ]
 }
