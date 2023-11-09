@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ProjectCard({ id, date, title, tag, img, desc }) {
+export default function ProjectCard({ id, date, title, tags, img, description }) {
     return (
         <div className='rounded-xl overflow-hidden bg-gradient-to-r from-[#F5E9F1] from-0% via-[#EBF4F8] via-50% to-[#F7E3E2] to-100%'>
             <div>
@@ -15,11 +15,11 @@ export default function ProjectCard({ id, date, title, tag, img, desc }) {
                         {title}
                     </h2>
                     <span className='text-xs sm:text-[10px] md:text-xs font-Inter-Regular text-[#F2994A]'>
-                        {tag}
+                        {tags.join(', ') + ', Concept'}
                     </span>
                 </div>
                 <span className='text-sm/6 sm:text-xs md:text-sm/6 font-Inter-Regular text-[#454D55] line-clamp-3'>
-                    {desc}
+                    {description}
                 </span>
             </div>
         </div>

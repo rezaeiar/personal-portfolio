@@ -17,13 +17,13 @@ export default function StatisticsSection() {
                 <div className="flex justify-between items-center">
                     {
                         date.map((statistics, index) => (
-                            <>
-                                <Statistics key={statistics.id} {...statistics} />
+                            <div key={statistics.id}>
+                                <Statistics {...statistics} />
                                 {
                                     index < date.length - 1 &&
                                     <span className='flex h-4 sm:h-20 w-px bg-[#ECEEE5]'></span>
                                 }
-                            </>
+                            </div>
                         ))
                     }
                 </div>

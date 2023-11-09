@@ -12,10 +12,10 @@ export default function Member({ name, position, img }) {
                     {position}
                 </span>
                 <div className="flex gap-x-2.5">
-                    <i class="bi bi-facebook"></i>
-                    <i class="bi bi-linkedin"></i>
-                    <i class="bi bi-instagram"></i>
-                    <i class="bi bi-dribbble"></i>
+                    <i className="bi bi-facebook"></i>
+                    <i className="bi bi-linkedin"></i>
+                    <i className="bi bi-instagram"></i>
+                    <i className="bi bi-dribbble"></i>
                 </div>
             </div>
         </div>

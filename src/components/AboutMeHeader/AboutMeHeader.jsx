@@ -12,7 +12,7 @@ export default function AboutMeHeader() {
                         12 — SaaS companies we’ve helped in the past 24 months. Our holistic process <br className='hidden sm:block' />
                         takes care of discovery, branding, design, and development.
                     </span>
-                    <i class="bi bi-arrow-down text-xl md:text-2xl"></i>
+                    <i className="bi bi-arrow-down text-xl md:text-2xl"></i>
                 </div>
             </div>
         </div>

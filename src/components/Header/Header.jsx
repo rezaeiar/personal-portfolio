@@ -15,9 +15,7 @@ export default function Header() {
                         <p className='text-[#1D1D1D] font-Inter-Regular text-sm sm:text-base md:text-lg xl:text-xl/[32px] text-center lg:text-start'>
                             Kirit Goti is a designer focused on building brands and creating digital experiences — currently working at TechHive
                         </p>
-                        <Button styles='block transition-colors hover:bg-gray-800 px-3 py-2.5 lg:px-3.5 lg:py-3 bg-zinc-950 text-white rounded-md font-Inter-SemiBold text-[10px] lg:text-xs'>
-                            Let’s Get Started
-                        </Button>
+                        <Button style='transition-colors hover:bg-gray-800 px-3 py-2.5 lg:px-3.5 lg:py-3 bg-zinc-950 text-white rounded-md font-Inter-SemiBold text-[10px] lg:text-xs' title='Let’s Get Started' route='/work' />
                     </div>
                     <div className='flex flex-shrink-0 w-full lg:w-auto'>
                         <img src="./images/home/image 1.png" alt="" className='grow lg:grow-0' />

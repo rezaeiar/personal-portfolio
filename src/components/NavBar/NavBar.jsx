@@ -37,14 +37,12 @@ export default function NavBar() {
                         </div>
                     </div>
                     <div>
-                        <div className="flex gap-x-4 lg:gap-x-6">
+                        <div className="hidden md:flex gap-x-4 lg:gap-x-6">
                             {
-                                menus.map(menu => (
-                                    <Button to={menu.route} styles={menu.styles}>
-                                        {
-                                            menu.title
-                                        }
-                                    </Button>
+                                menus.map((menu, index) => (
+                                    index === menus.length - 1
+                                        ? <Button {...menu} key={menu.id} style='transition-colors hover:bg-gray-800 px-3 py-2.5 lg:px-3.5 lg:py-3 bg-zinc-950 text-white rounded-md font-Inter-SemiBold text-[10px] lg:text-xs' />
+                                        : <Button {...menu} key={menu.id} style='text-zinc-950 font-Inter-Regular text-[10px] lg:text-xs' />
                                 ))
                             }
                         </div>

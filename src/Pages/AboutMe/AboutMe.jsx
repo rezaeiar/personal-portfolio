@@ -31,15 +31,15 @@ export default function AboutMe() {
                         <div className="flex flex-col gap-y-4 sm:gap-y-7">
                             <ul className='flex flex-col  justify-between lg:flex-col gap-y-2 sm:gap-y-4 font-Inter-Medium text-sm sm:text-base md:text-lg'>
                                 <li className='flex items-center gap-x-2'>
-                                    <i class="bi bi-clock"></i>
+                                    <i className="bi bi-clock"></i>
                                     Adipiscing eli sed eiusmod
                                 </li>
                                 <li className='flex items-center gap-x-2'>
-                                    <i class="bi bi-clock"></i>
+                                    <i className="bi bi-clock"></i>
                                     Tempor incididunt
                                 </li>
                                 <li className='flex items-center gap-x-2'>
-                                    <i class="bi bi-clock"></i>
+                                    <i className="bi bi-clock"></i>
                                     Labore et dolore magna
                                 </li>
                             </ul>

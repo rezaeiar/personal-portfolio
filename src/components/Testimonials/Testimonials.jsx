@@ -16,7 +16,7 @@ export default function Testimonials() {
                     </h4>
                     <div className="flex items-center justify-between gap-x-8">
                         <div className="hidden lg:flex testimonials-prev flex-items-center justify-center bg-[#F4F8FF] rounded-3xl cursor-pointer">
-                            <i class="bi bi-arrow-left p-3"></i>
+                            <i className="bi bi-arrow-left p-3"></i>
                         </div>
                         <Swiper
                             modules={[Navigation, Autoplay]}
@@ -105,7 +105,7 @@ export default function Testimonials() {
 
                         </Swiper>
                         <div className="hidden lg:flex testimonials-next flex-items-center justify-center bg-[#F4F8FF] rounded-3xl cursor-pointer">
-                            <i class="bi bi-arrow-right p-3"></i>
+                            <i className="bi bi-arrow-right p-3"></i>
                         </div>
                     </div>
                 </div>
