@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
-import menusReducer from './store/Menus'
-import projectsReducer from './store/projects'
+import menusReducer from '../Redux/store/menus.js'
+import projectsReducer from '../Redux/store/projects.js'
 
 const store = configureStore({
     reducer: {
