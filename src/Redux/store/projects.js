@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 export const getProjectsFromServer = createAsyncThunk(
     'projects/getProjectsFromServer',
     async (details) => {
-        return fetch(`http://localhost:3000/projects?_page=${details.page}&_limit=${details.limit}`)
+        return fetch(`https://personal-portfolio-db.vercel.app/projects?_page=${details.page}&_limit=${details.limit}`)
             .then(res => res.json())
             .then(data => data)
     }
