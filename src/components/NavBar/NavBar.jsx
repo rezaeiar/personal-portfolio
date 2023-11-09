@@ -38,15 +38,15 @@ export default function NavBar() {
                     </div>
                     <div>
                         <div className="flex gap-x-4 lg:gap-x-6">
-                            <Button to='/work' styles='hidden md:block text-zinc-950 font-Inter-Regular text-[10px] lg:text-xs'>
-                                💼 Work
-                            </Button>
-                            <Button to='/about-me' styles='hidden md:block text-zinc-950 font-Inter-Regular text-[10px] lg:text-xs'>
-                                😀 About Me
-                            </Button>
-                            <Button to='/contact-us' styles='hidden md:block transition-colors hover:bg-gray-800 px-3 py-2.5 lg:px-3.5 lg:py-3 bg-zinc-950 text-white rounded-md font-Inter-SemiBold text-[10px] lg:text-xs'>
-                                🤙 Contact Us
-                            </Button>
+                            {
+                                menus.map(menu => (
+                                    <Button to={menu.route} styles={menu.styles}>
+                                        {
+                                            menu.title
+                                        }
+                                    </Button>
+                                ))
+                            }
                         </div>
                         <div className="block md:hidden">
                             <span className='cursor-pointer'>
