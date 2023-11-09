@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Button from '../Button/Button'
 
 import { useDispatch, useSelector } from 'react-redux'
-import { getMenusFromServer } from '../../Redux/store/Menus'
+import { getMenusFromServer } from '../../Redux/store/menus'
 
 export default function NavBar() {
 
