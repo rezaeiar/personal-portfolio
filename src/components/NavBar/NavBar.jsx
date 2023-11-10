@@ -37,7 +37,7 @@ export default function NavBar() {
                         </div>
                     </div>
                     <div>
-                        <div className="hidden md:flex gap-x-4 lg:gap-x-6">
+                        <div className="hidden md:flex items-center gap-x-4 lg:gap-x-6">
                             {
                                 menus.map((menu, index) => (
                                     index === menus.length - 1

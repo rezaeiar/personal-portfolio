@@ -27,7 +27,8 @@
                 "UX",
                 "Vivid"
             ],
-            "description": "xpedita laborum suscipit sequi et nobis voluptas fuga placeat. Omnis est ratione. Repellendus recusandae a."
+            "description": "xpedita laborum suscipit sequi et nobis voluptas fuga placeat. Omnis est ratione. Repellendus recusandae a.",
+            "explanation": "Personal website design"
         },
         {
             "id": 2,
@@ -39,7 +40,8 @@
                 "UX",
                 "Vivid"
             ],
-            "description": "xpedita laborum suscipit sequi et nobis voluptas fuga placeat. Omnis est ratione. Repellendus recusandae a."
+            "description": "xpedita laborum suscipit sequi et nobis voluptas fuga placeat. Omnis est ratione. Repellendus recusandae a.",
+            "explanation": "Personal website design"
         },
         {
             "id": 3,
@@ -51,7 +53,8 @@
                 "UX",
                 "Vivid"
             ],
-            "description": "xpedita laborum suscipit sequi et nobis voluptas fuga placeat. Omnis est ratione. Repellendus recusandae a."
+            "description": "xpedita laborum suscipit sequi et nobis voluptas fuga placeat. Omnis est ratione. Repellendus recusandae a.",
+            "explanation": "Personal website design"
         },
         {
             "id": 4,
@@ -63,7 +66,8 @@
                 "UX",
                 "Vivid"
             ],
-            "description": "xpedita laborum suscipit sequi et nobis voluptas fuga placeat. Omnis est ratione. Repellendus recusandae a."
+            "description": "xpedita laborum suscipit sequi et nobis voluptas fuga placeat. Omnis est ratione. Repellendus recusandae a.",
+            "explanation": "Personal website design"
         },
         {
             "id": 5,
@@ -75,7 +79,8 @@
                 "UX",
                 "Vivid"
             ],
-            "description": "xpedita laborum suscipit sequi et nobis voluptas fuga placeat. Omnis est ratione. Repellendus recusandae a."
+            "description": "xpedita laborum suscipit sequi et nobis voluptas fuga placeat. Omnis est ratione. Repellendus recusandae a.",
+            "explanation": "Personal website design"
         },
         {
             "id": 6,
@@ -87,7 +92,21 @@
                 "UX",
                 "Vivid"
             ],
-            "description": "xpedita laborum suscipit sequi et nobis voluptas fuga placeat. Omnis est ratione. Repellendus recusandae a."
+            "description": "xpedita laborum suscipit sequi et nobis voluptas fuga placeat. Omnis est ratione. Repellendus recusandae a.",
+            "explanation": "Personal website design"
+        },
+        {
+            "id": 7,
+            "img": "Rectangle 11 (6).png",
+            "date": "May -July 2017",
+            "title": "Grids & Alignment",
+            "tags": [
+                "Mobile",
+                "UX",
+                "Vivid"
+            ],
+            "description": "xpedita laborum suscipit sequi et nobis voluptas fuga placeat. Omnis est ratione. Repellendus recusandae a.",
+            "explanation": "Personal website design"
         }
     ],
     "statistics": [
