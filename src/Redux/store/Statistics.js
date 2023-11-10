@@ -1,20 +1,20 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 
-export const getMenusFromServer = createAsyncThunk(
-    'menus/getMenusFromServer',
+export const getStatisticsFromServer = createAsyncThunk(
+    'statistics/getStatisticsFromServer',
     async () => {
-        return fetch('http://localhost:3000/menus')
+        return fetch('http://localhost:3000/statistics')
             .then(res => res.json())
             .then(data => data)
     }
 )
 const slice = createSlice({
-    name: 'menus',
+    name: 'statistics',
     initialState: [],
     reducers: {},
 
     extraReducers: (builder) => {
-        builder.addCase(getMenusFromServer.fulfilled, (state, action) => {
+        builder.addCase(getStatisticsFromServer.fulfilled, (state, action) => {
             return action.payload
         })
     }

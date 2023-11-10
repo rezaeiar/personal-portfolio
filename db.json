@@ -89,5 +89,27 @@
             ],
             "description": "xpedita laborum suscipit sequi et nobis voluptas fuga placeat. Omnis est ratione. Repellendus recusandae a."
         }
+    ],
+    "statistics": [
+        {
+            "id": 1,
+            "title": "Projects",
+            "value": 98
+        },
+        {
+            "id": 2,
+            "title": "People",
+            "value": 65
+        },
+        {
+            "id": 3,
+            "title": "Years",
+            "value": 10
+        },
+        {
+            "id": 4,
+            "title": "Offices",
+            "value": 15
+        }
     ]
 }
