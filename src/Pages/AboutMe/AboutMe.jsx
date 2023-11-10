@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import AboutMeHeader from '../../components/AboutMeHeader/AboutMeHeader'
 import DetailsSection from '../../components/DetailsSection/DetailsSection'
@@ -10,6 +10,13 @@ import Testimonials from '../../components/Testimonials/Testimonials'
 import Button from '../../components/Button/Button'
 
 export default function AboutMe() {
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }, [])
     return (
         <>
             <AboutMeHeader />

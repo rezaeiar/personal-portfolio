@@ -11,9 +11,7 @@ export default function GetStarted() {
                         Have a project in mind? <br />
                         Let’s get to work.
                     </h4>
-                    <Button styles='block transition-colors hover:bg-gray-800 px-3 py-2.5 lg:px-3.5 lg:py-3 rounded-md font-Inter-SemiBold text-[10px] lg:text-xs bg-gradient-to-r from-[#F5E9F1] from-0% via-[#EBF4F8] via-50% to-[#F7E3E2] to-100% text-black'>
-                        🦾 Start Project
-                    </Button>
+                    <Button title='🦾 Start Project' route='/work' style='block transition-colors hover:bg-gray-800 px-3 py-2.5 lg:px-3.5 lg:py-3 rounded-md font-Inter-SemiBold text-[10px] lg:text-xs bg-gradient-to-r from-[#F5E9F1] from-0% via-[#EBF4F8] via-50% to-[#F7E3E2] to-100% text-black' />
                 </div>
             </div>
         </div>
