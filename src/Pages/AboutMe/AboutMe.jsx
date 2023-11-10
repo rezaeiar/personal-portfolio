@@ -7,6 +7,7 @@ import StatisticsSection from '../../components/StatisticsSection/StatisticsSect
 import Members from '../../components/Members/Members'
 import AboutMeCover from '../../components/AboutMeCover/AboutMeCover'
 import Testimonials from '../../components/Testimonials/Testimonials'
+import GetStarted from '../../components/GetStarted/GetStarted'
 
 import Button from '../../components/Button/Button'
 
@@ -109,6 +110,7 @@ export default function AboutMe() {
             </DetailsSection>
             <AboutMeCover />
             <Testimonials />
+            <GetStarted />
         </>
     )
 }
