@@ -3,7 +3,7 @@ import React, { Fragment, useEffect, useState } from 'react'
 import Statistics from '../Statistics/Statistics'
 
 import { useDispatch, useSelector } from 'react-redux'
-import { getStatisticsFromServer } from '../../Redux/store/Statistics'
+import { getStatisticsFromServer } from '../../Redux/store/statistics'
 
 export default function StatisticsSection() {
 
