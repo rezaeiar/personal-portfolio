@@ -1,18 +1,23 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Member from '../Member/Member'
 
+import { useDispatch, useSelector } from 'react-redux'
+import { getMembersFromServer } from '../../Redux/store/members'
+
 export default function Members() {
-    const [data, setData] = useState([
-        { id: 1, name: 'Anna Smith', position: 'Creative Director', img: 'Rectangle 13 (1).png' },
-        { id: 2, name: 'Anna Smith', position: 'Creative Director', img: 'Rectangle 13 (2).png' },
-        { id: 3, name: 'Anna Smith', position: 'Creative Director', img: 'Rectangle 13 (3).png' },
-        { id: 4, name: 'Anna Smith', position: 'Creative Director', img: 'Rectangle 13 (4).png' },
-    ])
+
+    const members = useSelector(state => state.members)
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(getMembersFromServer())
+    }, [])
+
     return (
         <div className='py-6 lg:py-12 grid grid-cols-2 md:grid-cols-4'>
             {
-                data.map((member) => (
+                members.map((member) => (
                     <Member key={member.id} {...member} />
                 ))
             }

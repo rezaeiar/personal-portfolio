@@ -111,5 +111,31 @@
             "title": "Offices",
             "value": 15
         }
+    ],
+    "members": [
+        {
+            "id": 1,
+            "name": "Anna Smith",
+            "position": "Creative Director",
+            "img": "Rectangle 13 (1).png"
+        },
+        {
+            "id": 2,
+            "name": "Mykell Due",
+            "position": "Creative Director",
+            "img": "Rectangle 13 (2).png"
+        },
+        {
+            "id": 3,
+            "name": "Sebastian Kafo",
+            "position": "Creative Director",
+            "img": "Rectangle 13 (3).png"
+        },
+        {
+            "id": 4,
+            "name": "Ilar Smith",
+            "position": "Creative Director",
+            "img": "Rectangle 13 (4).png"
+        }
     ]
 }
