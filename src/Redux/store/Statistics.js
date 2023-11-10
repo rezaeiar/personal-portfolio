@@ -1,11 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import apiRequests from '../../services/axios/configs/configs'
 
 export const getStatisticsFromServer = createAsyncThunk(
     'statistics/getStatisticsFromServer',
     async () => {
-        return fetch('http://localhost:3000/statistics')
-            .then(res => res.json())
-            .then(data => data)
+        return apiRequests('/statistics').then(res => res.data)
     }
 )
 const slice = createSlice({

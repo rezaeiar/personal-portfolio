@@ -1,11 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import apiRequests from '../../services/axios/configs/configs'
 
 export const getMembersFromServer = createAsyncThunk(
     'members/getMembersFromServer',
     async () => {
-        return fetch('http://localhost:3000/members')
-            .then(res => res.json())
-            .then(data => data)
+        return apiRequests('/members').then(res => res.data)
     }
 )
 const slice = createSlice({
