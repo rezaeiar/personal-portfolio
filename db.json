@@ -156,5 +156,25 @@
             "position": "Creative Director",
             "img": "Rectangle 13 (4).png"
         }
+    ],
+    "testimonials": [
+        {
+            "id": 1,
+            "description": "Everyone on the team is expected to meet the same high standards and produce work of the highest calibre, Everyone on the team is expected to meet the same high standards",
+            "HeaderPhoto": "Rectangle 108.png",
+            "name": "Michael B. Jordan",
+            "testimonial": "VP of Marketing, disney",
+            "company": "Layer_1.svg",
+            "profilePhoto": "Rectangle 5.png"
+        },
+        {
+            "id": 2,
+            "description": "Everyone on the team is expected to meet the same high standards and produce work of the highest calibre, Everyone on the team is expected to meet the same high standards",
+            "HeaderPhoto": "Rectangle 108.png",
+            "name": "Michael B. Jordan",
+            "testimonial": "VP of Marketing, Google",
+            "company": "google.png",
+            "profilePhoto": "Rectangle 5.png"
+        }
     ]
 }
