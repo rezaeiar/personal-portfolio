@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react'
+import useScroll from '../../hooks/useScroll'
+
 import Header from '../../components/Header/Header'
 import ProjectsSection from '../../components/ProjectsSection/ProjectsSection'
 import DetailsSection from '../../components/DetailsSection/DetailsSection'
@@ -9,12 +11,7 @@ import GetStarted from '../../components/GetStarted/GetStarted'
 
 export default function Home() {
 
-    useEffect(() => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    }, [])
+    useScroll()
 
     return (
         <>
