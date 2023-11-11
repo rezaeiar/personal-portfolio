@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 
-import Button from '../Button/Button'
-
 export default function GetInTouch() {
 
     const [agreePrivacyPolicy, setAgreePrivacyPolicy] = useState(false)

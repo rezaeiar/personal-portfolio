@@ -3,6 +3,7 @@ import useScroll from '../../hooks/useScroll'
 
 import ContactUsHeader from '../../components/ContactUsHeader/ContactUsHeader'
 import GetInTouch from '../../components/GetInTouch/GetInTouch'
+import GoogleMap from '../../components/GoogleMap/GoogleMap'
 
 export default function ContactUs() {
 
@@ -11,6 +12,7 @@ export default function ContactUs() {
         <>
             <ContactUsHeader />
             <GetInTouch />
+            <GoogleMap />
         </>
     )
 }
