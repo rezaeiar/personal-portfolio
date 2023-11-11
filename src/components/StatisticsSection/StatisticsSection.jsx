@@ -1,24 +1,24 @@
 import React, { Fragment, useEffect, useState } from 'react'
 
-// import Statistics from '../Statistics/Statistics'
+import Statistics from '../Statistics/Statistics'
 
-// import { useDispatch, useSelector } from 'react-redux'
-// import { getStatisticsFromServer } from '../../Redux/store/statistics'
+import { useDispatch, useSelector } from 'react-redux'
+import { getStatisticsFromServer } from '../../Redux/store/statistics'
 
 export default function StatisticsSection() {
 
-    // const statistics = useSelector(state => state.statistics)
-    // const dispatch = useDispatch()
+    const statistics = useSelector(state => state.statistics)
+    const dispatch = useDispatch()
 
-    // useEffect(() => {
-    //     dispatch(getStatisticsFromServer())
-    // }, [])
+    useEffect(() => {
+        dispatch(getStatisticsFromServer())
+    }, [])
 
     return (
         <div className='py-6 lg:py-12'>
             <div className="container">
                 <div className="flex justify-between items-center">
-                    {/* {
+                    {
                         statistics.map((statistic, index) => (
                             <Fragment key={statistic.id}>
                                 <Statistics {...statistic} />
@@ -28,7 +28,7 @@ export default function StatisticsSection() {
                                 }
                             </Fragment>
                         ))
-                    } */}
+                    }
                 </div>
             </div>
         </div>
