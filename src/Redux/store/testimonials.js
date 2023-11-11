@@ -19,7 +19,7 @@ const slice = createSlice({
     }
 })
 
-// export default slice.reducer
+export default slice.reducer
 
 // import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 // import apiRequests from '../../services/axios/configs/configs'
