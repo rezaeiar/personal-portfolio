@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function ContactUsHeader() {
     return (
-        <div className='pt-12 pb-4 md:py-20'>
+        <div className='pt-8 pb-4 xl:py-12'>
             <div className="container">
                 <div className="flex flex-col items-center gap-y-2.5">
                     <h4 className='text-[#34113F] font-Inter-Bold text-3xl md:text-5xl'>
