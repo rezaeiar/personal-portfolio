@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 
+import { Formik, Form, Field } from 'formik'
+
 export default function GetInTouch() {
 
     const [agreePrivacyPolicy, setAgreePrivacyPolicy] = useState(false)
@@ -45,54 +47,97 @@ export default function GetInTouch() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col gap-y-4 sm:gap-y-8 w-full sm:w-[592px]">
-                        <div className="grid grid-cols-2 gap-x-5 gap-y-8">
-                            <div className="relative flex items-center">
-                                <input type="text" placeholder='Name' className='h-10 text-sm lg:text-base lg:h-14 w-full outline-none border-b border-[#D0D5DD] ps-8 lg:lg:ps-12 text-[#98A2B3] placeholder:text-[#98A2B3] font-Inter-Regular' />
-                                <i class="bi bi-person absolute left-2 text-lg lg:text-xl text-[#98A2B3]"></i>
-                            </div>
-                            <div className="relative flex items-center">
-                                <input type="text" placeholder='Email Address' className='h-10 text-sm lg:text-base lg:h-14 w-full outline-none border-b border-[#D0D5DD] ps-8 lg:lg:ps-12 text-[#98A2B3] placeholder:text-[#98A2B3] font-Inter-Regular' />
-                                <i class="bi bi-envelope absolute left-2 text-lg lg:text-xl text-[#98A2B3]"></i>
-                            </div>
-                            <div className="relative flex items-center">
-                                <input type="text" placeholder='Phone' className='h-10 text-sm lg:text-base lg:h-14 w-full outline-none border-b border-[#D0D5DD] ps-8 lg:lg:ps-12 text-[#98A2B3] placeholder:text-[#98A2B3] font-Inter-Regular' />
-                                <i class="bi bi-telephone absolute left-2 text-lg lg:text-xl text-[#98A2B3]"></i>
-                            </div>
-                            <div className="relative flex w-full items-center">
-                                <select className='h-10 text-sm lg:text-base lg:h-14 w-full outline-none border-b border-[#D0D5DD] ps-2 lg:ps-4 text-[#98A2B3] placeholder:text-[#98A2B3] font-Inter-Regular'>
-                                    <option value="re">Select</option>
-                                    <option value="gfd">543</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div className="grid grid-cols-1 relative">
-                            <textarea className='h-36 ps-8 lg:ps-12 resize-none pt-4 text-[#98A2B3] placeholder:text-[#98A2B3] font-Inter-Regular text-sm outline-none border-b border-[#D0D5DD]' placeholder='How can we help you ? Feel free to get in touch!'></textarea>
-                            <i class="bi bi-pencil absolute left-2 lg:left-4 top-4 text-base text-[#98A2B3]"></i>
-                        </div>
-                        <div className="grid grid-cols-1">
-                            <div className="flex gap-x-2 items-center">
-                                {/* <div className="h-3 w-3 sm:h-4 sm:w-4 rounded border border-[#D0D5DD]">
-                                    <div className={`${agreePrivacyPolicy ? 'opacity-100' : 'opacity-0'} flex h-full w-full bg-black items-center justify-center cursor-pointer`} onClick={() => setAgreePrivacyPolicy(prevState => !prevState)}>
-                                        <i className="bi bi-check text-white"></i>
+                    <Formik
+                        initialValues={{
+                            name: '',
+                            email: '',
+                            phone: '',
+                            textarea: '',
+                            type: '-1',
+                            check: false
+                        }}
+                        onSubmit={(values, { setSubmitting }) => {
+                            setTimeout(() => {
+                                setSubmitting(false)
+                            }, 3000);
+                            console.log(values);
+                        }}
+                        validate={(values) => {
+                            const errors = {}
+
+                            if (values.name === '') {
+                                errors.name = 'Field is empty!'
+                            }
+                            if (values.email === '') {
+                                errors.email = 'Field is empty!'
+                            }
+                            if (values.phone === '') {
+                                errors.phone = 'Field is empty!'
+                            }
+                            if (values.textarea === '') {
+                                errors.textarea = 'Field is empty!'
+                            }
+                            if (values.type === '-1') {
+                                errors.type = 'Not valid!'
+                            }
+
+                            return errors
+                        }}
+                    >
+                        {({ values, handleChange, handleSubmit, errors, touched, isSubmitting }) => {
+                            console.log(errors);
+                            return <Form className="flex flex-col gap-y-4 sm:gap-y-8 w-full sm:w-[592px]">
+                                <div className="grid grid-cols-2 gap-x-5 gap-y-8">
+                                    <div className="relative flex items-center">
+                                        <Field name='name' placeholder='Name' className={`h-10 text-sm lg:text-base lg:h-14 w-full outline-none border-b ps-8 lg:lg:ps-12 text-[#98A2B3] placeholder:text-[#98A2B3] font-Inter-Regular ${(errors.name && touched.name) ? 'border-[#ff6456]' : 'border-[#D0D5DD]'}`} />
+                                        <i class="bi bi-person absolute left-2 text-lg lg:text-xl text-[#98A2B3]"></i>
                                     </div>
-                                </div> */}
-                                <input type="checkbox" />
-                                <span className='text-[#667085] text-sm lg:text-base'>
-                                    I agree that my data is collected and stored
-                                </span>
-                            </div>
-                        </div>
-                        <div className="grid grid-cols-1">
-                            <div className='transition-colors cursor-pointer hover:bg-gray-800 px-3 py-2.5 lg:px-3.5 lg:py-3 bg-zinc-950 text-white rounded-md font-Inter-SemiBold text-[10px] lg:text-xs w-fit'>
-                                🤙 Get In Touch
-                            </div>
-                        </div>
-                    </div>
+                                    <div className="relative flex items-center">
+                                        <Field name='email' placeholder='Email Address' className={`h-10 text-sm lg:text-base lg:h-14 w-full outline-none border-b ps-8 lg:lg:ps-12 text-[#98A2B3] placeholder:text-[#98A2B3] font-Inter-Regular ${(errors.email && touched.email) ? 'border-[#ff6456]' : 'border-[#D0D5DD]'}`} />
+                                        <i class="bi bi-envelope absolute left-2 text-lg lg:text-xl text-[#98A2B3]"></i>
+                                    </div>
+                                    <div className="relative flex items-center">
+                                        <Field name='phone' placeholder='Phone' className={`h-10 text-sm lg:text-base lg:h-14 w-full outline-none border-b ps-8 lg:lg:ps-12 text-[#98A2B3] placeholder:text-[#98A2B3] font-Inter-Regular ${(errors.phone && touched.phone) ? 'border-[#ff6456]' : 'border-[#D0D5DD]'}`} />
+                                        <i class="bi bi-telephone absolute left-2 text-lg lg:text-xl text-[#98A2B3]"></i>
+                                    </div>
+                                    <div className="relative flex w-full items-center">
+                                        <select onChange={handleChange} defaultValue='-1' className={`h-10 text-sm lg:text-base lg:h-14 w-full outline-none border-b ps-2 lg:ps-4 text-[#98A2B3] placeholder:text-[#98A2B3] font-Inter-Regular ${(errors.type && touched.type) ? 'border-[#ff6456]' : 'border-[#D0D5DD]'}`} name='type'>
+                                            <option value="-1">Select</option>
+                                            <option value="creator">Creator</option>
+                                            <option value="admin">Admin</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div className="grid grid-cols-1 relative">
+                                    <textarea className={`h-36 ps-8 lg:ps-12 resize-none pt-4 text-[#98A2B3] placeholder:text-[#98A2B3] font-Inter-Regular text-sm outline-none border-b ${(errors.type && touched.type) ? 'border-[#ff6456]' : 'border-[#D0D5DD]'}`} onChange={handleChange} value={values.textarea} name='textarea' placeholder='How can we help you ? Feel free to get in touch!'></textarea>
+                                    <i class="bi bi-pencil absolute left-2 lg:left-4 top-4 text-base text-[#98A2B3]"></i>
+                                </div>
+                                <div className="grid grid-cols-1">
+                                    <div className="flex gap-x-2 items-center">
+                                        {/* <div className="h-3 w-3 sm:h-4 sm:w-4 rounded border border-[#D0D5DD]">
+                                            <div className={`${agreePrivacyPolicy ? 'opacity-100' : 'opacity-0'} flex h-full w-full bg-black items-center justify-center cursor-pointer`} onClick={() => setAgreePrivacyPolicy(prevState => !prevState)}>
+                                                <i className="bi bi-check text-white"></i>
+                                            </div>
+                                        </div> */}
+                                        <input type="checkbox" checked={values.check} onChange={handleChange} name='check' />
+                                        <span className='text-[#667085] text-sm lg:text-base'>
+                                            I agree that my data is collected and stored
+                                        </span>
+                                    </div>
+                                </div>
+                                <button type='submit' className={`transition-colors cursor-pointer px-3 py-2.5 lg:px-3.5 lg:py-3 bg-zinc-950 text-white rounded-md font-Inter-SemiBold text-[10px] lg:text-xs w-32 ${isSubmitting ? 'animate-pulse' : 'hover:bg-gray-800'}`} disabled={isSubmitting}>
+                                    {
+                                        isSubmitting ? 'Loading..' : '🤙 Get In Touch'
+                                    }
+                                </button>
+                            </Form>
+                        }}
+                    </Formik>
                 </div>
             </div>
         </div>
     )
 }
 
-// این صفحه زده شه بصورت ریسپانسیو و هندل فورم ها
+// kol in code ha yekbar kamel khande va yad gerefte shavad
+// dar sorat emkan code ha tamiz kari shavad
