@@ -1,20 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 import { Formik, Form, Field } from 'formik'
 
-import apiRequests from '../../services/axios/configs/configs'
-
 import { useDispatch, useSelector } from 'react-redux'
-import { sendContactsToServerServer } from '../../Redux/store/contacts'
+import { sendContactsToServer } from '../../Redux/store/contacts'
 
 export default function GetInTouch() {
 
-    const [agreePrivacyPolicy, setAgreePrivacyPolicy] = useState(false)
-
     const dispatch = useDispatch()
-    const contacts = useSelector(state => state.contacts)
-
-    console.log(contacts);
 
     return (
         <div className='py-6 sm:py-8 xl:py-12'>
@@ -70,7 +63,7 @@ export default function GetInTouch() {
                             setTimeout(() => {
                                 setSubmitting(false)
                             }, 3000);
-                            dispatch(sendContactsToServerServer(values))
+                            dispatch(sendContactsToServer(values))
                         }}
                         validate={(values) => {
                             const errors = {}
@@ -123,11 +116,6 @@ export default function GetInTouch() {
                                 </div>
                                 <div className="grid grid-cols-1">
                                     <div className="flex gap-x-2 items-center">
-                                        {/* <div className="h-3 w-3 sm:h-4 sm:w-4 rounded border border-[#D0D5DD]">
-                                            <div className={`${agreePrivacyPolicy ? 'opacity-100' : 'opacity-0'} flex h-full w-full bg-black items-center justify-center cursor-pointer`} onClick={() => setAgreePrivacyPolicy(prevState => !prevState)}>
-                                                <i className="bi bi-check text-white"></i>
-                                            </div>
-                                        </div> */}
                                         <input type="checkbox" checked={values.acceptPrivacy} onChange={handleChange} name='acceptPrivacy' />
                                         <span className='text-[#667085] text-sm lg:text-base'>
                                             I agree that my data is collected and stored

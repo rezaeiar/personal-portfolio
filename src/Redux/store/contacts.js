@@ -1,8 +1,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import apiRequests from '../../services/axios/configs/configs'
 
-export const sendContactsToServerServer = createAsyncThunk(
-    'contacts/sendContactsToServerServer',
+export const sendContactsToServer = createAsyncThunk(
+    'contacts/sendContactsToServer',
     async (values) => {
         return apiRequests({
             url: '/contacts',
@@ -18,13 +18,13 @@ const slice = createSlice({
     reducers: {},
 
     extraReducers: (builder) => {
-        builder.addCase(sendContactsToServerServer.fulfilled, (state, action) => {
+        builder.addCase(sendContactsToServer.fulfilled, (state, action) => {
             return action.payload
         })
-        builder.addCase(sendContactsToServerServer.pending, (state, action) => {
+        builder.addCase(sendContactsToServer.pending, (state, action) => {
             return "pending"
         })
-        builder.addCase(sendContactsToServerServer.rejected, (state, action) => {
+        builder.addCase(sendContactsToServer.rejected, (state, action) => {
             return "rejected"
         })
     }
