@@ -25,7 +25,7 @@ export default function Menu({ changeShowMenu, isShowMenu }) {
                 <Link to='/' className='h-7 lg:h-9 flex items-center' onClick={() => chaneMenuDisplayHandler(false)}>
                     <img src="./images/logoipsum-logo.svg" alt="Logo" className='h-full w-full' />
                 </Link>
-                <i class="bi bi-x text-xl sm:text-2xl" onClick={() => chaneMenuDisplayHandler(false)}></i>
+                <i className="bi bi-x text-xl sm:text-2xl" onClick={() => chaneMenuDisplayHandler(false)}></i>
             </div>
             <div className='flex flex-col gap-y-4'>
                 <NavLink to='/' onClick={() => chaneMenuDisplayHandler(false)} className={({isActive}) => isActive ? 'py-1.5 px-2 rounded font-Inter-Regdivar text-sm bg-black text-white' : 'py-1.5 px-2 rounded text-[#454D55] font-Inter-Regdivar text-sm'}>
@@ -33,7 +33,7 @@ export default function Menu({ changeShowMenu, isShowMenu }) {
                 </NavLink>
                 {
                     menus.map(menu => (
-                        <NavLink to={menu.route} onClick={() => chaneMenuDisplayHandler(false)} className={({isActive}) => isActive ? 'py-1.5 px-2 rounded font-Inter-Regdivar text-sm bg-black text-white' : 'py-1.5 px-2 rounded text-[#454D55] font-Inter-Regdivar text-sm'}>
+                        <NavLink to={menu.route} key={menu.id} onClick={() => chaneMenuDisplayHandler(false)} className={({isActive}) => isActive ? 'py-1.5 px-2 rounded font-Inter-Regdivar text-sm bg-black text-white' : 'py-1.5 px-2 rounded text-[#454D55] font-Inter-Regdivar text-sm'}>
                             {menu.title}
                         </NavLink>
                     ))

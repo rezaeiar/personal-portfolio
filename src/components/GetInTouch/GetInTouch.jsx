@@ -1,10 +1,20 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { Formik, Form, Field } from 'formik'
+
+import apiRequests from '../../services/axios/configs/configs'
+
+import { useDispatch, useSelector } from 'react-redux'
+import { sendContactsToServerServer } from '../../Redux/store/contacts'
 
 export default function GetInTouch() {
 
     const [agreePrivacyPolicy, setAgreePrivacyPolicy] = useState(false)
+
+    const dispatch = useDispatch()
+    const contacts = useSelector(state => state.contacts)
+
+    console.log(contacts);
 
     return (
         <div className='py-6 sm:py-8 xl:py-12'>
@@ -23,7 +33,7 @@ export default function GetInTouch() {
                         <div className="flex flex-col gap-y-6">
                             <div className="flex gap-x-3 items-center">
                                 <div className="flex items-center justify-center w-10 h-10 lg:h-12 lg:w-12 rounded-lg bg-[#EDECE2] shrink-0">
-                                    <i class="bi bi-geo-alt text-lg lg:text-xl text-[#344054]"></i>
+                                    <i className="bi bi-geo-alt text-lg lg:text-xl text-[#344054]"></i>
                                 </div>
                                 <span className='text-[#344054] font-Inter-Regular text-sm lg:text-base'>
                                     India — 723 17th Street, Office 478 Mumbai, IM 81566
@@ -31,7 +41,7 @@ export default function GetInTouch() {
                             </div>
                             <div className="flex gap-x-3 items-center">
                                 <div className="flex items-center justify-center w-10 h-10 lg:h-12 lg:w-12 rounded-lg bg-[#EDECE2] shrink-0">
-                                    <i class="bi bi-envelope text-lg lg:text-xl text-[#344054]"></i>
+                                    <i className="bi bi-envelope text-lg lg:text-xl text-[#344054]"></i>
                                 </div>
                                 <span className='text-[#344054] font-Inter-Regular text-sm lg:text-base'>
                                     kiritgoti007@gmail.com
@@ -39,7 +49,7 @@ export default function GetInTouch() {
                             </div>
                             <div className="flex gap-x-3 items-center">
                                 <div className="flex items-center justify-center w-10 h-10 lg:h-12 lg:w-12 rounded-lg bg-[#EDECE2] shrink-0">
-                                    <i class="bi bi-telephone text-lg lg:text-xl text-[#344054]"></i>
+                                    <i className="bi bi-telephone text-lg lg:text-xl text-[#344054]"></i>
                                 </div>
                                 <span className='text-[#344054] font-Inter-Regular text-sm lg:text-base'>
                                     +90 54321 09876
@@ -52,15 +62,15 @@ export default function GetInTouch() {
                             name: '',
                             email: '',
                             phone: '',
-                            textarea: '',
+                            message: '',
                             type: '-1',
-                            check: false
+                            acceptPrivacy: false
                         }}
                         onSubmit={(values, { setSubmitting }) => {
                             setTimeout(() => {
                                 setSubmitting(false)
                             }, 3000);
-                            console.log(values);
+                            dispatch(sendContactsToServerServer(values))
                         }}
                         validate={(values) => {
                             const errors = {}
@@ -74,8 +84,8 @@ export default function GetInTouch() {
                             if (values.phone === '') {
                                 errors.phone = 'Field is empty!'
                             }
-                            if (values.textarea === '') {
-                                errors.textarea = 'Field is empty!'
+                            if (values.message === '') {
+                                errors.message = 'Field is empty!'
                             }
                             if (values.type === '-1') {
                                 errors.type = 'Not valid!'
@@ -85,20 +95,19 @@ export default function GetInTouch() {
                         }}
                     >
                         {({ values, handleChange, handleSubmit, errors, touched, isSubmitting }) => {
-                            console.log(errors);
                             return <Form className="flex flex-col gap-y-4 sm:gap-y-8 w-full sm:w-[592px]">
                                 <div className="grid grid-cols-2 gap-x-5 gap-y-8">
                                     <div className="relative flex items-center">
                                         <Field name='name' placeholder='Name' className={`h-10 text-sm lg:text-base lg:h-14 w-full outline-none border-b ps-8 lg:lg:ps-12 text-[#98A2B3] placeholder:text-[#98A2B3] font-Inter-Regular ${(errors.name && touched.name) ? 'border-[#ff6456]' : 'border-[#D0D5DD]'}`} />
-                                        <i class="bi bi-person absolute left-2 text-lg lg:text-xl text-[#98A2B3]"></i>
+                                        <i className="bi bi-person absolute left-2 text-lg lg:text-xl text-[#98A2B3]"></i>
                                     </div>
                                     <div className="relative flex items-center">
                                         <Field name='email' placeholder='Email Address' className={`h-10 text-sm lg:text-base lg:h-14 w-full outline-none border-b ps-8 lg:lg:ps-12 text-[#98A2B3] placeholder:text-[#98A2B3] font-Inter-Regular ${(errors.email && touched.email) ? 'border-[#ff6456]' : 'border-[#D0D5DD]'}`} />
-                                        <i class="bi bi-envelope absolute left-2 text-lg lg:text-xl text-[#98A2B3]"></i>
+                                        <i className="bi bi-envelope absolute left-2 text-lg lg:text-xl text-[#98A2B3]"></i>
                                     </div>
                                     <div className="relative flex items-center">
                                         <Field name='phone' placeholder='Phone' className={`h-10 text-sm lg:text-base lg:h-14 w-full outline-none border-b ps-8 lg:lg:ps-12 text-[#98A2B3] placeholder:text-[#98A2B3] font-Inter-Regular ${(errors.phone && touched.phone) ? 'border-[#ff6456]' : 'border-[#D0D5DD]'}`} />
-                                        <i class="bi bi-telephone absolute left-2 text-lg lg:text-xl text-[#98A2B3]"></i>
+                                        <i className="bi bi-telephone absolute left-2 text-lg lg:text-xl text-[#98A2B3]"></i>
                                     </div>
                                     <div className="relative flex w-full items-center">
                                         <select onChange={handleChange} defaultValue='-1' className={`h-10 text-sm lg:text-base lg:h-14 w-full outline-none border-b ps-2 lg:ps-4 text-[#98A2B3] placeholder:text-[#98A2B3] font-Inter-Regular ${(errors.type && touched.type) ? 'border-[#ff6456]' : 'border-[#D0D5DD]'}`} name='type'>
@@ -109,8 +118,8 @@ export default function GetInTouch() {
                                     </div>
                                 </div>
                                 <div className="grid grid-cols-1 relative">
-                                    <textarea className={`h-36 ps-8 lg:ps-12 resize-none pt-4 text-[#98A2B3] placeholder:text-[#98A2B3] font-Inter-Regular text-sm outline-none border-b ${(errors.type && touched.type) ? 'border-[#ff6456]' : 'border-[#D0D5DD]'}`} onChange={handleChange} value={values.textarea} name='textarea' placeholder='How can we help you ? Feel free to get in touch!'></textarea>
-                                    <i class="bi bi-pencil absolute left-2 lg:left-4 top-4 text-base text-[#98A2B3]"></i>
+                                    <textarea className={`h-36 ps-8 lg:ps-12 resize-none pt-4 text-[#98A2B3] placeholder:text-[#98A2B3] font-Inter-Regular text-sm outline-none border-b ${(errors.type && touched.type) ? 'border-[#ff6456]' : 'border-[#D0D5DD]'}`} onChange={handleChange} value={values.message} name='message' placeholder='How can we help you ? Feel free to get in touch!'></textarea>
+                                    <i className="bi bi-pencil absolute left-2 lg:left-4 top-4 text-base text-[#98A2B3]"></i>
                                 </div>
                                 <div className="grid grid-cols-1">
                                     <div className="flex gap-x-2 items-center">
@@ -119,7 +128,7 @@ export default function GetInTouch() {
                                                 <i className="bi bi-check text-white"></i>
                                             </div>
                                         </div> */}
-                                        <input type="checkbox" checked={values.check} onChange={handleChange} name='check' />
+                                        <input type="checkbox" checked={values.acceptPrivacy} onChange={handleChange} name='acceptPrivacy' />
                                         <span className='text-[#667085] text-sm lg:text-base'>
                                             I agree that my data is collected and stored
                                         </span>
