@@ -135,6 +135,3 @@ export default function GetInTouch() {
         </div>
     )
 }
-
-// kol in code ha yekbar kamel khande va yad gerefte shavad
-// dar sorat emkan code ha tamiz kari shavad

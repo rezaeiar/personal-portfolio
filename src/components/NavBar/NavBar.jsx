@@ -55,6 +55,9 @@ export default function NavBar() {
                         </div>
                         <div>
                             <div className="hidden md:flex items-center gap-x-4 lg:gap-x-6">
+                                <Link to='/work/4'>
+                                slingle
+                                </Link>
                                 {
                                     menus.map((menu, index) => (
                                         index === menus.length - 1
