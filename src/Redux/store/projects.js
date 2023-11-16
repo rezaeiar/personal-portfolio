@@ -15,6 +15,19 @@ export const getProjectsFromServer = createAsyncThunk(
             .then(res => res.data)
     }
 )
+export const getOneProjectFromServer = createAsyncThunk(
+    'projects/getOneProjectFromServer',
+    async (id) => {
+        return apiRequests({
+            url: '/projects',
+            method: "GET",
+            params: {
+                'id': +id,
+            },
+        })
+            .then(res => res.data)
+    }
+)
 const slice = createSlice({
     name: 'projects',
     initialState: [],
@@ -28,6 +41,16 @@ const slice = createSlice({
             return "pending"
         })
         builder.addCase(getProjectsFromServer.rejected, (state, action) => {
+            return "rejected"
+        })
+
+        builder.addCase(getOneProjectFromServer.fulfilled, (state, action) => {
+            return action.payload
+        })
+        builder.addCase(getOneProjectFromServer.pending, (state, action) => {
+            return "pending"
+        })
+        builder.addCase(getOneProjectFromServer.rejected, (state, action) => {
             return "rejected"
         })
     }
