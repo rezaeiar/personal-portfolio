@@ -6,6 +6,8 @@ import Button from '../../components/Button/Button'
 import SingleWorkDisplay from '../../components/SingleWorkDisplay/SingleWorkDisplay'
 import SingleWorkDetails from '../../components/SingleWorkDetails/SingleWorkDetails'
 import SingleWorkBanner from '../../components/SingleWorkBanner/SingleWorkBanner'
+import Testimonials from '../../components/Testimonials/Testimonials'
+import GetStarted from '../../components/GetStarted/GetStarted'
 
 export default function SingleWork() {
     return (
@@ -108,6 +110,8 @@ export default function SingleWork() {
                 </p>
             </SingleWorkDetails>
             <SingleWorkBanner />
+            <Testimonials />
+            <GetStarted />
         </>
     )
 }

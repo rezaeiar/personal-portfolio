@@ -47,7 +47,7 @@ export default function Testimonials() {
                                 testimonials.map(testimonial => (
                                     <SwiperSlide key={testimonial.id}>
                                         <div className="flex mt-8 lg:mt-10 bg-[#F6F1F7] rounded-2xl grow p-6 lg:p-10 flex-col gap-y-3 sm:gap-y-6 lg:gap-y-8 relative">
-                                            <img src="./images/about-me/“.svg" className='absolute h-8 sm:h-auto left-8 sm:left-12 -top-4 sm:-top-8 lg:-top-10' alt="" />
+                                            <img src="/images/about-me/“.svg" className='absolute h-8 sm:h-auto left-8 sm:left-12 -top-4 sm:-top-8 lg:-top-10' alt="" />
                                             <div className="flex justify-between items-center gap-x-2 sm:gap-x-8 lg:gap-x-16">
                                                 <p className='font-Inter-Regular text-xs sm:text-xl lg:text-2xl text-[#34113F]'>
                                                     {
@@ -55,14 +55,14 @@ export default function Testimonials() {
                                                     }
                                                 </p>
                                                 <div className="shrink-0">
-                                                    <img src={`./images/about-me/${testimonial.HeaderPhoto}`} className='h-32 sm:h-auto' alt="" />
+                                                    <img src={`/images/about-me/${testimonial.HeaderPhoto}`} className='h-32 sm:h-auto' alt="" />
                                                 </div>
                                             </div>
                                             <span className='h-px w-full bg-[#E8DBEC]'></span>
                                             <div className="flex justify-between items-center">
                                                 <div className="flex gap-x-3">
                                                     <div className="rounded-full overflow-hidden">
-                                                        <img src={`./images/about-me/${testimonial.profilePhoto}`} className='' alt="" />
+                                                        <img src={`/images/about-me/${testimonial.profilePhoto}`} className='' alt="" />
                                                     </div>
                                                     <div className="flex flex-col gap-y-1 justify-center">
                                                         <span className='font-Inter-Regular text-xs sm:text-sm'>
@@ -78,7 +78,7 @@ export default function Testimonials() {
                                                     </div>
                                                 </div>
                                                 <div className='w-16 sm:w-auto'>
-                                                    <img src={`./images/about-me/${testimonial.company}`} className='w-16' alt="" />
+                                                    <img src={`/images/about-me/${testimonial.company}`} className='w-16' alt="" />
                                                 </div>
                                             </div>
                                         </div>
