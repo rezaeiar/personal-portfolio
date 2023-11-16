@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiRequests = axios.create({
-    baseURL: 'http://localhost:3000'
+    baseURL: 'https://personal-portfolio-db.vercel.app'
 })
 
 export default apiRequests
