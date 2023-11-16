@@ -49,7 +49,7 @@ export default function SingleWork() {
                                 <ul className="grid grid-cols-2 text-sm sm:text-base lg:text-lg text-[#34113F] font-Inter-Bold gap-y-1">
                                     {
                                         projectDetails.length && projectDetails[0].roles.map(role => (
-                                            <li>
+                                            <li key={role}>
                                                 {role}
                                             </li>
                                         ))

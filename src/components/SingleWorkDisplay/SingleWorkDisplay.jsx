@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function SingleWorkDisplay({ project }) {
-    console.log(project);
     return (
         <div className='bg-[#F4F8FF] py-8 sm:py-12 xl:py-20'>
             <div className="container">

@@ -22,7 +22,7 @@ export default function NavBar() {
 
     const getSearch = () => {
 
-        console.log(searchValue);
+        console.log("Searched Value:", searchValue);
         // Search Handler
     }
 
