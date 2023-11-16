@@ -36,7 +36,10 @@
         "Web Design",
         "Development"
       ],
-      "role": ["Branding", "Web Design"]
+      "role": [
+        "Branding",
+        "Web Design"
+      ]
     },
     {
       "id": 2,
@@ -57,7 +60,9 @@
         "Web Design",
         "Development"
       ],
-      "role": ["Branding"]
+      "role": [
+        "Branding"
+      ]
     },
     {
       "id": 3,
@@ -78,7 +83,10 @@
         "Web Design",
         "Development"
       ],
-      "role": ["Branding", "Web Design"]
+      "role": [
+        "Branding",
+        "Web Design"
+      ]
     },
     {
       "id": 4,
@@ -99,7 +107,10 @@
         "Web Design",
         "Development"
       ],
-      "role": ["Branding", "Development"]
+      "role": [
+        "Branding",
+        "Development"
+      ]
     },
     {
       "id": 5,
@@ -120,7 +131,10 @@
         "Web Design",
         "Development"
       ],
-      "role": ["Branding", "Web Design"]
+      "role": [
+        "Branding",
+        "Web Design"
+      ]
     },
     {
       "id": 6,
@@ -141,7 +155,10 @@
         "Web Design",
         "Development"
       ],
-      "role": ["Branding", "Web Design"]
+      "role": [
+        "Branding",
+        "Web Design"
+      ]
     },
     {
       "id": 7,
@@ -162,7 +179,10 @@
         "Web Design",
         "Development"
       ],
-      "role": ["Branding", "Web Design"]
+      "role": [
+        "Branding",
+        "Web Design"
+      ]
     }
   ],
   "statistics": [
@@ -233,5 +253,27 @@
       "profilePhoto": "Rectangle 5.png"
     }
   ],
-  "contacts": []
+  "contacts": [],
+  "projectImages": [
+    {
+      "id": 1,
+      "img": "products-banner 1.png"
+    },
+    {
+      "id": 2,
+      "img": "products-banner 1.png"
+    },
+    {
+      "id": 3,
+      "img": "products-banner 1.png"
+    },
+    {
+      "id": 4,
+      "img": "products-banner 1.png"
+    },
+    {
+      "id": 5,
+      "img": "products-banner 1.png"
+    }
+  ]
 }

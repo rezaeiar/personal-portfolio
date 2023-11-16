@@ -1,0 +1,20 @@
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #A259FF !important;
+    opacity: 1;
+    width: 20px;
+    border-radius: 6px !important;
+}
+
+/* target all bullets */
+.swiper-pagination-bullet {
+    background-color: #9bacce !important;
+    opacity: 1;
+}
+
+.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    position: absolute;
+    bottom: 0px;
+}
+.swiper-slide {
+    padding-bottom: 30px;
+  }

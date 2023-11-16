@@ -5,6 +5,7 @@ import statisticsReducer from '../Redux/store/statistics.js'
 import membersReducer from '../Redux/store/members.js'
 import testimonialsReducer from '../Redux/store/testimonials.js'
 import contactsReducer from '../Redux/store/contacts.js'
+import projectImagesReducer from '../Redux/store/projectImages.js'
 
 const store = configureStore({
     reducer: {
@@ -13,7 +14,8 @@ const store = configureStore({
         statistics: statisticsReducer,
         members: membersReducer,
         testimonials: testimonialsReducer,
-        contacts: contactsReducer
+        contacts: contactsReducer,
+        projectImages: projectImagesReducer
     }
 })
 
