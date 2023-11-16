@@ -4,6 +4,7 @@ import SingleWorkHeader from '../../components/SingleWorkHeader/SingleWorkHeader
 import DetailsSection from '../../components/DetailsSection/DetailsSection'
 import Button from '../../components/Button/Button'
 import SingleWorkDisplay from '../../components/SingleWorkDisplay/SingleWorkDisplay'
+import SingleWorkDetails from '../../components/SingleWorkDetails/SingleWorkDetails'
 
 export default function SingleWork() {
     return (
@@ -86,6 +87,25 @@ export default function SingleWork() {
                 </div>
             </DetailsSection>
             <SingleWorkDisplay />
+            <SingleWorkDetails title='Problems'>
+                <p>
+                    Our eCommerce design starts and ends with a best-in-class experience strategy that builds brands and drives transactions.
+                </p>
+                <p>
+                    My job is to build your website so that it is functional and user friendly but at the same time attractive. My aim is to bring across your message and identity in the most creative way. It’s time to bring it all together. Nothing is more rewarding for me than making great work for clients with meaningful missions.
+                </p>
+            </SingleWorkDetails>
+            <SingleWorkDetails title='The Solution'>
+                <p>
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.
+                </p>
+                <p>
+                    It’s time to bring it all together. Nothing is more rewarding for me than making great work for clients with meaningful missions. Through a deep understanding of our audience’s makeup and motivations, we design digital experiences that connect with people.
+                </p>
+                <p>
+                    We build and activate brands through cultural insight, strategic vision, and the power of emotion across every element of its expression.
+                </p>
+            </SingleWorkDetails>
         </>
     )
 }
