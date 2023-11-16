@@ -1,4 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+
+import { useParams } from 'react-router-dom'
+
+import useScroll from '../../hooks/useScroll'
 
 import SingleWorkHeader from '../../components/SingleWorkHeader/SingleWorkHeader'
 import DetailsSection from '../../components/DetailsSection/DetailsSection'
@@ -10,6 +14,13 @@ import Testimonials from '../../components/Testimonials/Testimonials'
 import GetStarted from '../../components/GetStarted/GetStarted'
 
 export default function SingleWork() {
+
+    const { id } = useParams()
+
+    useEffect(() => {
+        console.log(id);
+    }, [])
+    useScroll()
     return (
         <>
             <SingleWorkHeader />

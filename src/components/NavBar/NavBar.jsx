@@ -46,7 +46,7 @@ export default function NavBar() {
                     <div className="flex justify-between items-center">
                         <div className="flex items-center gap-x-6">
                             <Link to='/' className='h-7 lg:h-9 flex items-center'>
-                                <img src="./images/logoipsum-logo.svg" alt="Logo" className='h-full w-full' />
+                                <img src="/images/logoipsum-logo.svg" alt="Logo" className='h-full w-full' />
                             </Link>
                             <div className="hidden md:flex items-center h-8 lg:h-9 w-60 bg-[#F5F6F7] rounded-xl relative">
                                 <i className="bi bi-search absolute text-[#99A4AF] text-xs ml-3 cursor-pointer" onClick={getSearch}></i>
@@ -55,9 +55,6 @@ export default function NavBar() {
                         </div>
                         <div>
                             <div className="hidden md:flex items-center gap-x-4 lg:gap-x-6">
-                                <Link to='/work/4'>
-                                slingle
-                                </Link>
                                 {
                                     menus.map((menu, index) => (
                                         index === menus.length - 1

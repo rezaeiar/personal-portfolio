@@ -1,8 +1,10 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
+
 export default function ProjectCard({ id, date, title, tags, img, description }) {
     return (
-        <div className='rounded-xl overflow-hidden bg-gradient-to-r from-[#F5E9F1] from-0% via-[#EBF4F8] via-50% to-[#F7E3E2] to-100%'>
+        <Link to={`/work/${id}`} className='rounded-xl overflow-hidden bg-gradient-to-r from-[#F5E9F1] from-0% via-[#EBF4F8] via-50% to-[#F7E3E2] to-100%'>
             <div>
                 <img src={`./images/projects/${img}`} className='w-full' alt="project image" />
             </div>
@@ -22,6 +24,6 @@ export default function ProjectCard({ id, date, title, tags, img, description })
                     {description}
                 </span>
             </div>
-        </div>
+        </Link>
     )
 }

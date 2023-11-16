@@ -1,8 +1,10 @@
-import React, {Fragment} from 'react'
+import React, { Fragment } from 'react'
+
+import { Link } from 'react-router-dom'
 
 export default function PortfolioItem({ id, img, date, title, tags, description, explanation }) {
     return (
-        <div className='flex gap-y-3 md:gap-y-4 lg:gap-y-5 flex-col'>
+        <Link to={`/work/${id}`} className='flex gap-y-3 md:gap-y-4 lg:gap-y-5 flex-col'>
             <div className='rounded-xl overflow-hidden'>
                 <img src={`./images/projects/${img}`} className='w-full' alt="" />
             </div>
@@ -31,6 +33,6 @@ export default function PortfolioItem({ id, img, date, title, tags, description,
                     }
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
