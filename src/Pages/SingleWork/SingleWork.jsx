@@ -3,6 +3,7 @@ import React from 'react'
 import SingleWorkHeader from '../../components/SingleWorkHeader/SingleWorkHeader'
 import DetailsSection from '../../components/DetailsSection/DetailsSection'
 import Button from '../../components/Button/Button'
+import SingleWorkDisplay from '../../components/SingleWorkDisplay/SingleWorkDisplay'
 
 export default function SingleWork() {
     return (
@@ -84,6 +85,7 @@ export default function SingleWork() {
                     </div>
                 </div>
             </DetailsSection>
+            <SingleWorkDisplay />
         </>
     )
 }
