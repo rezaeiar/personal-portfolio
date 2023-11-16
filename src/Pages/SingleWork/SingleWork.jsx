@@ -5,6 +5,7 @@ import DetailsSection from '../../components/DetailsSection/DetailsSection'
 import Button from '../../components/Button/Button'
 import SingleWorkDisplay from '../../components/SingleWorkDisplay/SingleWorkDisplay'
 import SingleWorkDetails from '../../components/SingleWorkDetails/SingleWorkDetails'
+import SingleWorkBanner from '../../components/SingleWorkBanner/SingleWorkBanner'
 
 export default function SingleWork() {
     return (
@@ -106,6 +107,7 @@ export default function SingleWork() {
                     We build and activate brands through cultural insight, strategic vision, and the power of emotion across every element of its expression.
                 </p>
             </SingleWorkDetails>
+            <SingleWorkBanner />
         </>
     )
 }
