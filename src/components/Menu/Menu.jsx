@@ -5,6 +5,8 @@ import { Link, NavLink } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { getMenusFromServer } from '../../Redux/store/menus'
 
+import { _ } from 'lodash'
+
 export default function Menu({ changeShowMenu, isShowMenu }) {
 
     const menus = useSelector(state => state.menus)
@@ -28,12 +30,12 @@ export default function Menu({ changeShowMenu, isShowMenu }) {
                 <i className="bi bi-x text-xl sm:text-2xl" onClick={() => chaneMenuDisplayHandler(false)}></i>
             </div>
             <div className='flex flex-col gap-y-4'>
-                <NavLink to='/' onClick={() => chaneMenuDisplayHandler(false)} className={({isActive}) => isActive ? 'py-1.5 px-2 rounded font-Inter-Regdivar text-sm bg-black text-white' : 'py-1.5 px-2 rounded text-[#454D55] font-Inter-Regdivar text-sm'}>
+                <NavLink to='/' onClick={() => chaneMenuDisplayHandler(false)} className={({ isActive }) => isActive ? 'py-1.5 px-2 rounded font-Inter-Regdivar text-sm bg-black text-white' : 'py-1.5 px-2 rounded text-[#454D55] font-Inter-Regdivar text-sm'}>
                     🏠 Home
                 </NavLink>
                 {
-                    menus.map(menu => (
-                        <NavLink to={menu.route} key={menu.id} onClick={() => chaneMenuDisplayHandler(false)} className={({isActive}) => isActive ? 'py-1.5 px-2 rounded font-Inter-Regdivar text-sm bg-black text-white' : 'py-1.5 px-2 rounded text-[#454D55] font-Inter-Regdivar text-sm'}>
+                    _.map(menus, menu => (
+                        <NavLink to={menu.route} key={menu.id} onClick={() => chaneMenuDisplayHandler(false)} className={({ isActive }) => isActive ? 'py-1.5 px-2 rounded font-Inter-Regdivar text-sm bg-black text-white' : 'py-1.5 px-2 rounded text-[#454D55] font-Inter-Regdivar text-sm'}>
                             {menu.title}
                         </NavLink>
                     ))

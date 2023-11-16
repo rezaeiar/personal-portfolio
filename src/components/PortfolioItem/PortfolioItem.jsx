@@ -2,6 +2,8 @@ import React, { Fragment } from 'react'
 
 import { Link } from 'react-router-dom'
 
+import { _ } from 'lodash'
+
 export default function PortfolioItem({ id, img, date, title, tags, description, explanation }) {
     return (
         <Link to={`/work/${id}`} className='flex gap-y-3 md:gap-y-4 lg:gap-y-5 flex-col'>
@@ -19,7 +21,7 @@ export default function PortfolioItem({ id, img, date, title, tags, description,
                 </div>
                 <div className='flex items-center gap-x-2 text-xs xl:text-sm text-[#667085] shrink-0'>
                     {
-                        tags.map((singleTag, index) => (
+                        _.map(tags, (singleTag, index) => (
                             <Fragment key={singleTag}>
                                 <span>
                                     {singleTag}

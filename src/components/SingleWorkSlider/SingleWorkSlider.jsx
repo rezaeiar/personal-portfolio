@@ -10,6 +10,7 @@ import 'swiper/css/pagination';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProjectImagesFromServer } from '../../Redux/store/projectImages';
 
+import { _ } from 'lodash'
 
 export default function SingleWorkSlider() {
     const dispatch = useDispatch()
@@ -35,7 +36,7 @@ export default function SingleWorkSlider() {
                         }}
                     >
                         {
-                            projectImages.map(projectImage => (
+                            _.map(projectImages, projectImage => (
                                 <SwiperSlide key={projectImage.id}>
                                     <div className='w-full'>
                                         <img src={`/images/single-work/${projectImage.img}`} className='w-full' alt="" />

@@ -6,6 +6,8 @@ import PortfolioPulse from '../PortfolioPulse/PortfolioPulse'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProjectsFromServer } from '../../Redux/store/projects'
 
+import { _ } from 'lodash'
+
 export default function PortfolioSection() {
 
     const [itemsShown, setItemsShown] = useState(6)
@@ -30,12 +32,12 @@ export default function PortfolioSection() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8 xl:gap-12">
                         {
                             (projects === 'pending' || projects === 'rejected') &&
-                            Array.from(Array(6).keys()).map((item) => (
+                            _.map(Array.from(Array(6).keys()), (item) => (
                                 <PortfolioPulse key={item} />
                             ))
                         }
                         {
-                            (projects !== 'pending' && projects !== 'rejected') && projects.map(project => (
+                            (projects !== 'pending' && projects !== 'rejected') && _.map(projects, project => (
                                 <PortfolioItem key={project.id} {...project} />
                             ))
                         }

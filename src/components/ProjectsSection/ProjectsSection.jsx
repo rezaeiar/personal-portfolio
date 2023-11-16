@@ -7,6 +7,8 @@ import ProjectPulse from '../ProjectPulse/ProjectPulse'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProjectsFromServer } from '../../Redux/store/projects'
 
+import { _ } from 'lodash'
+
 export default function ProjectsSection() {
 
     const projects = useSelector(state => state.projects)
@@ -26,12 +28,13 @@ export default function ProjectsSection() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6 lg:gap-y-12">
                         {
                             (projects === 'pending' || projects === 'rejected') &&
-                            Array.from(Array(6).keys()).map((item) => (
+                            _.map(Array.from(Array(6).keys()), (item) => (
                                 <ProjectPulse key={item} />
                             ))
                         }
                         {
-                            (projects !== 'pending' && projects !== 'rejected') && projects.map(project => (
+                            (projects !== 'pending' && projects !== 'rejected') &&
+                            _.map(projects, project => (
                                 <ProjectCard key={project.id} {...project} />
                             ))
                         }

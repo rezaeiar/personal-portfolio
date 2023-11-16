@@ -15,6 +15,8 @@ import Testimonials from '../../components/Testimonials/Testimonials'
 import GetStarted from '../../components/GetStarted/GetStarted'
 import apiRequests from '../../services/axios/configs/configs'
 
+import { _ } from 'lodash'
+
 export default function SingleWork() {
 
     const { id } = useParams()
@@ -48,7 +50,8 @@ export default function SingleWork() {
                                 </span>
                                 <ul className="grid grid-cols-2 text-sm sm:text-base lg:text-lg text-[#34113F] font-Inter-Bold gap-y-1">
                                     {
-                                        projectDetails.length && projectDetails[0].roles.map(role => (
+                                        projectDetails.length &&
+                                        _.map(projectDetails[0].roles, role => (
                                             <li key={role}>
                                                 {role}
                                             </li>

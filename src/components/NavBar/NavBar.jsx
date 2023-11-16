@@ -9,6 +9,8 @@ import { getMenusFromServer } from '../../Redux/store/menus'
 import Menu from "../Menu/Menu";
 import Overlay from '../Overlay/Overlay'
 
+import { _ } from 'lodash'
+
 export default function NavBar() {
 
     const menus = useSelector(state => state.menus)
@@ -56,7 +58,7 @@ export default function NavBar() {
                         <div>
                             <div className="hidden md:flex items-center gap-x-4 lg:gap-x-6">
                                 {
-                                    menus.map((menu, index) => (
+                                    _.map(menus, (menu, index) => (
                                         index === menus.length - 1
                                             ? <Button {...menu} key={menu.id} style='transition-colors hover:bg-gray-800 px-3 py-2.5 lg:px-3.5 lg:py-3 bg-zinc-950 text-white rounded-md font-Inter-SemiBold text-[10px] lg:text-xs' />
                                             : <Button {...menu} key={menu.id} style='text-zinc-950 font-Inter-Regular text-[10px] lg:text-xs' />

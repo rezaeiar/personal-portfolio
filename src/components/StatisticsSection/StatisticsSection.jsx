@@ -5,6 +5,8 @@ import Statistics from '../Statistics/Statistics'
 import { useDispatch, useSelector } from 'react-redux'
 import { getStatisticsFromServer } from '../../Redux/store/statistics'
 
+import { _ } from 'lodash'
+
 export default function StatisticsSection() {
 
     const statistics = useSelector(state => state.statistics)
@@ -19,7 +21,7 @@ export default function StatisticsSection() {
             <div className="container">
                 <div className="flex justify-between items-center">
                     {
-                        statistics.map((statistic, index) => (
+                        _.map(statistics, (statistic, index) => (
                             <Fragment key={statistic.id}>
                                 <Statistics {...statistic} />
                                 {

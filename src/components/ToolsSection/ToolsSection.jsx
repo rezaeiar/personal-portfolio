@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 
 import Tool from '../Tool/Tool'
 
+import { _ } from 'lodash'
+
 export default function ToolsSection() {
     const [data, setData] = useState([
         { id: 1, title: 'Figma', img: 'figma.svg', color: 'bg-[#F3F6FB]' },
@@ -27,7 +29,7 @@ export default function ToolsSection() {
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-8 gap-4 sm:gap-6">
                         {
-                            data.map(tool => (
+                            _.map(data, tool => (
                                 <Tool key={tool.id} {...tool} />
                             ))
                         }

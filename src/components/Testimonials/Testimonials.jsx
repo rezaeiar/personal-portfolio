@@ -9,6 +9,8 @@ import 'swiper/css/navigation';
 import { useDispatch, useSelector } from 'react-redux';
 import { getTestimonialsFromServer } from '../../Redux/store/testimonials';
 
+import { _ } from 'lodash'
+
 export default function Testimonials() {
 
     const testimonials = useSelector(state => state.testimonials)
@@ -44,7 +46,7 @@ export default function Testimonials() {
                             }}
                         >
                             {
-                                testimonials.map(testimonial => (
+                                _.map(testimonials, testimonial => (
                                     <SwiperSlide key={testimonial.id}>
                                         <div className="flex mt-8 lg:mt-10 bg-[#F6F1F7] rounded-2xl grow p-6 lg:p-10 flex-col gap-y-3 sm:gap-y-6 lg:gap-y-8 relative">
                                             <img src="/images/about-me/“.svg" className='absolute h-8 sm:h-auto left-8 sm:left-12 -top-4 sm:-top-8 lg:-top-10' alt="" />
@@ -67,7 +69,7 @@ export default function Testimonials() {
                                                     <div className="flex flex-col gap-y-1 justify-center">
                                                         <span className='font-Inter-Regular text-xs sm:text-sm'>
                                                             {
-                                                            testimonial.name
+                                                                testimonial.name
                                                             }
                                                         </span>
                                                         <h6 className='font-Inter-Bold text-sm sm:text-base'>
