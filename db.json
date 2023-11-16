@@ -19,6 +19,7 @@
   "projects": [
     {
       "id": 1,
+      "client": "Revitalising",
       "img": "Rectangle 11 (1).png",
       "date": "May -July 2017",
       "title": "Grids & Alignment",
@@ -28,10 +29,18 @@
         "Vivid"
       ],
       "description": "xpedita laborum suscipit sequi et nobis voluptas fuga placeat. Omnis est ratione. Repellendus recusandae a.",
-      "explanation": "Personal website design"
+      "explanation": "Personal website design",
+      "roles": [
+        "Branding",
+        "UI/UX Design",
+        "Web Design",
+        "Development"
+      ],
+      "role": ["Branding", "Web Design"]
     },
     {
       "id": 2,
+      "client": "Revitalising",
       "img": "Rectangle 11 (2).png",
       "date": "May -July 2019",
       "title": "Grids & Alignment",
@@ -41,10 +50,18 @@
         "Vivid"
       ],
       "description": "xpedita laborum suscipit sequi et nobis voluptas fuga placeat. Omnis est ratione. Repellendus recusandae a.",
-      "explanation": "Personal website design"
+      "explanation": "Personal website design",
+      "roles": [
+        "Branding",
+        "UI/UX Design",
+        "Web Design",
+        "Development"
+      ],
+      "role": ["Branding"]
     },
     {
       "id": 3,
+      "client": "Revitalising",
       "img": "Rectangle 11 (3).png",
       "date": "May -July 2017",
       "title": "Grids & Alignment",
@@ -54,10 +71,18 @@
         "Vivid"
       ],
       "description": "xpedita laborum suscipit sequi et nobis voluptas fuga placeat. Omnis est ratione. Repellendus recusandae a.",
-      "explanation": "Personal website design"
+      "explanation": "Personal website design",
+      "roles": [
+        "Branding",
+        "UI/UX Design",
+        "Web Design",
+        "Development"
+      ],
+      "role": ["Branding", "Web Design"]
     },
     {
       "id": 4,
+      "client": "Revitalising",
       "img": "Rectangle 11 (4).png",
       "date": "May -July 2017",
       "title": "Grids & Alignment",
@@ -67,10 +92,18 @@
         "Vivid"
       ],
       "description": "xpedita laborum suscipit sequi et nobis voluptas fuga placeat. Omnis est ratione. Repellendus recusandae a.",
-      "explanation": "Personal website design"
+      "explanation": "Personal website design",
+      "roles": [
+        "Branding",
+        "UI/UX Design",
+        "Web Design",
+        "Development"
+      ],
+      "role": ["Branding", "Development"]
     },
     {
       "id": 5,
+      "client": "Revitalising",
       "img": "Rectangle 11 (5).png",
       "date": "May -July 2017",
       "title": "Grids & Alignment",
@@ -80,10 +113,18 @@
         "Vivid"
       ],
       "description": "xpedita laborum suscipit sequi et nobis voluptas fuga placeat. Omnis est ratione. Repellendus recusandae a.",
-      "explanation": "Personal website design"
+      "explanation": "Personal website design",
+      "roles": [
+        "Branding",
+        "UI/UX Design",
+        "Web Design",
+        "Development"
+      ],
+      "role": ["Branding", "Web Design"]
     },
     {
       "id": 6,
+      "client": "Revitalising",
       "img": "Rectangle 11 (6).png",
       "date": "May -July 2017",
       "title": "Grids & Alignment",
@@ -93,10 +134,18 @@
         "Vivid"
       ],
       "description": "xpedita laborum suscipit sequi et nobis voluptas fuga placeat. Omnis est ratione. Repellendus recusandae a.",
-      "explanation": "Personal website design"
+      "explanation": "Personal website design",
+      "roles": [
+        "Branding",
+        "UI/UX Design",
+        "Web Design",
+        "Development"
+      ],
+      "role": ["Branding", "Web Design"]
     },
     {
       "id": 7,
+      "client": "Revitalising",
       "img": "Rectangle 11 (6).png",
       "date": "May -July 2017",
       "title": "Grids & Alignment",
@@ -106,7 +155,14 @@
         "Vivid"
       ],
       "description": "xpedita laborum suscipit sequi et nobis voluptas fuga placeat. Omnis est ratione. Repellendus recusandae a.",
-      "explanation": "Personal website design"
+      "explanation": "Personal website design",
+      "roles": [
+        "Branding",
+        "UI/UX Design",
+        "Web Design",
+        "Development"
+      ],
+      "role": ["Branding", "Web Design"]
     }
   ],
   "statistics": [
@@ -177,6 +233,5 @@
       "profilePhoto": "Rectangle 5.png"
     }
   ],
-  "contacts": [
-  ]
+  "contacts": []
 }
