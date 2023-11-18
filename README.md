@@ -24,6 +24,7 @@
 ## About The Project
 
 This is a portfolio project with a lot of attractive features and the use of functional libraries such as Redux and Axios!
+[Project Deployed Link - View the project](https://personal-portfolio-kappa-flax.vercel.app/)
 
 Project features:
 * Fully responsive
@@ -68,6 +69,6 @@ _Follow the steps below to install and run._
    npm install
    ```
 4. Run the project
-   ``sh
+   ```sh
    npm run dev
    ```
