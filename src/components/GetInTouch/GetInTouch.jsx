@@ -59,9 +59,10 @@ export default function GetInTouch() {
                             type: '-1',
                             acceptPrivacy: false
                         }}
-                        onSubmit={(values, { setSubmitting }) => {
+                        onSubmit={(values, { setSubmitting, resetForm }) => {
                             setTimeout(() => {
                                 setSubmitting(false)
+                                resetForm()
                             }, 3000);
                             dispatch(sendContactsToServer(values))
                         }}
