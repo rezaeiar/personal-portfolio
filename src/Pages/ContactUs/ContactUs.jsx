@@ -10,9 +10,9 @@ export default function ContactUs() {
     useScroll()
     return (
         <>
-            {/* <ContactUsHeader /> */}
+            <ContactUsHeader />
             <GetInTouch />
-            {/* <GoogleMap /> */}
+            <GoogleMap />
         </>
     )
 }
